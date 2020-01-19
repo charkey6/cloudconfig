@@ -1,8 +1,7 @@
 server:
   port: 8085
   
-spring:
-  profiles: prod
+profiles: prod
 
 #关联注册中心
 eureka:
