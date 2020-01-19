@@ -1,0 +1,23 @@
+server:
+  port: 8085
+
+#关联注册中心
+eureka:
+  client:
+    register-with-eureka: false    #不会将自己的信息注册到eureka中
+    service-url:
+      #链接注册中心集群
+      defaultZone: http://localhost:8761/eureka
+
+feign:
+  hystrix:
+    enabled: true                 #启动熔断器机制 !!!!!!!!!!!!!
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000  #设定断路器超时时间
+
