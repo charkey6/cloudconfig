@@ -1,7 +1,10 @@
+--- #环境分割线
 server:
   port: 8085
-  
-profiles: prod
+  servlet:
+    context-path: /
+spring:
+  profiles: prod
 
 #关联注册中心
 eureka:
